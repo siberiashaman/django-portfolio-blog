@@ -1,0 +1,76 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dmitry Shestakov - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/style.css' %}">
+    <script async type="text/javascript" src="{% static 'core/js/bulma.js' %}"></script>
+
+</head>
+<body>
+
+ <!-- Navigation bar -->
+  <nav class="navbar is-info is-fixed-top">
+    <div class="navbar-brand">
+        <a class="navbar-item"href="/">
+            <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
+          </a>
+      <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div id="navbarExampleTransparentExample" class="navbar-menu">
+      <div class="navbar-end">
+        <div class=" navbar-item">
+            <form method="get" action="{% url 'search' %}">
+                <div class="control has-icons-left">
+                      <input class="input is-rounded" name="query"  type="text" placeholder="Поиск">
+                      <span class="icon is-left">
+                        <i class="fa fa-search"></i>
+                      </span>
+                </div>
+            </form>
+        </div>
+        <a class="navbar-item" href="{% url 'about' %}">
+          <span>About</span>
+        </a>
+        <a class="navbar-item" href="#services">
+          <span>Services</span>
+        </a>
+        <a class="navbar-item" href="#resume">
+          <span>Resume</span>
+        </a>
+        <a class="navbar-item" href="#portfolio">
+          <span>Portfolio</span>
+        </a>
+        <a class="navbar-item" href="#contact">
+          <span>Contact</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+<!-- END NAV -->
+
+            {% block content %}
+            {% endblock %}
+
+
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            &copy; Copyright 2022 by <strong><a href="#">Dmitry Shestakov.</a></strong>
+          </p>
+        </div>
+    </footer>
+</body>
+</html>
