@@ -18,7 +18,7 @@
  <!-- Navigation bar -->
   <nav class="navbar is-info is-fixed-top">
     <div class="navbar-brand">
-        <a class="navbar-item"href="/">
+        <a class="navbar-item"href="{% url 'about' %}">
             <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
           </a>
       <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
@@ -40,20 +40,20 @@
                 </div>
             </form>
         </div>
-        <a class="navbar-item" href="{% url 'about' %}">
-          <span>About</span>
+        <a class="navbar-item" href="#about">
+          <span>Об авторе</span>
         </a>
         <a class="navbar-item" href="#services">
           <span>Services</span>
         </a>
-        <a class="navbar-item" href="#resume">
-          <span>Resume</span>
-        </a>
         <a class="navbar-item" href="#portfolio">
-          <span>Portfolio</span>
+          <span>Портфолио</span>
+        </a>
+        <a class="navbar-item" href="{% url 'frontpage' %}">
+          <span>Блог</span>
         </a>
         <a class="navbar-item" href="#contact">
-          <span>Contact</span>
+          <span>Обратная связь</span>
         </a>
       </div>
     </div>

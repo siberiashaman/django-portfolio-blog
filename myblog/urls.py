@@ -30,7 +30,7 @@ urlpatterns = [
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
     path('robots.txt', robots_txt, name='robots_txt'),
     path('admin/', admin.site.urls),
-    path('about', about, name='about'),
+    path('blog', frontpage, name='frontpage'),
     path('', include('blog.urls')),
-    path('', frontpage, name='frontpage'),
+    path('', about, name='about'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

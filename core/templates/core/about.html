@@ -1,5 +1,5 @@
 {% extends 'core/base.html' %}
-
+{% load static %}
 {% block title %}
 About page
 {% endblock %}
@@ -22,15 +22,10 @@ About page
   <section class="section" id="about">
     <!-- Title -->
     <div class="section-heading">
-      <h3 class="title is-2">About Me</h3>
-      <h4 class="subtitle is-5">Jack of all trades, master of "some"</h4>
+      <h3 class="title is-2">Об авторе</h3>
       <div class="container">
-        <p>Web developer with more than <strong>4 years</strong> of well-rounded experience with a degree in the
-          field of
-          <strong>Computer Science</strong>, extensive knowledge of modern Web techniques and love for <strong>Coffee</strong>.
-          Looking for an opportunity to work and upgrade, as well as being involved in an organization that
-          believes
-          in gaining a competitive edge and giving back to the community.</p>
+        <p>Приветствую всех посетителей сайта. С 2005 изучаю вебразработку. В течение этого времени менялись используемые инструменты, но я стараюсь постоянно самообучаться в этой области. <br>
+          Если ваша компания связана с IT и есть соответствующие профилю вакансии, с удовольствием рассмотрю возможные варианты.</p>
       </div>
     </div>
 
@@ -39,7 +34,7 @@ About page
         <!-- Profile -->
         <div class="card">
           <div class="card-content">
-            <h3 class="title is-4">Profile</h3>
+            <h3 class="title is-4">Контакты</h3>
 
             <div class="content">
               <table class="table-profile">
@@ -48,25 +43,20 @@ About page
                   <th colspan="2"></th>
                 </tr>
                 <tr>
-                  <td>Address:</td>
-                  <td>Guru's Lab</td>
-                </tr>
-                <tr>
-                  <td>Phone:</td>
-                  <td>0123-456789</td>
+                  <td>Адрес:</td>
+                  <td>г. Краснодар</td>
                 </tr>
                 <tr>
                   <td>Email:</td>
-                  <td>minion@despicable.me</td>
+                  <td>siberiashaman@yandex.ru</td>
                 </tr>
               </table>
             </div>
             <br>
             <div class="buttons has-addons is-centered">
-              <a href="#" class="button is-link">Github</a>
-              <a href="#" class="button is-link">LinkedIn</a>
-              <a href="#" class="button is-link">Twitter</a>
-              <a href="#" class="button is-link">CodeTrace</a>
+              <a href="https://t.me/Siberiashaman" class="button is-link">Telegram</a>
+              <a href="https://vk.com/dshest" class="button is-link">Vk</a>
+              <a href="https://github.com/siberiashaman" class="button is-link">Github</a>
             </div>
           </div>
         </div>
@@ -76,7 +66,7 @@ About page
         <div class="card">
           <div class="card-image">
             <figure class="image is-4by3">
-              <img src="https://source.unsplash.com/random/1280x960" alt="Placeholder image">
+              <img src="{% static 'core/images/me.jpg' %}" alt="Placeholder image">
             </figure>
           </div>
         </div>
@@ -85,14 +75,14 @@ About page
         <!-- Skills -->
         <div class="card">
           <div class="card-content skills-content">
-            <h3 class="title is-4">Skills</h3>
+            <h3 class="title is-4">Стек технологий</h3>
             <div class="content">
 
               <article class="media">
                 <div class="media-content">
                   <div class="content">
                     <p>
-                      <strong>JavaScript:</strong>
+                      <strong>Html\Css:</strong>
                       <br>
                       <progress class="progress is-primary" value="90" max="100"></progress>
                     </p>
@@ -104,9 +94,9 @@ About page
                 <div class="media-content">
                   <div class="content">
                     <p>
-                      <strong>Vue.js:</strong>
+                      <strong>Python:</strong>
                       <br>
-                      <progress class="progress is-primary" value="90" max="100"></progress>
+                      <progress class="progress is-primary" value="60" max="100"></progress>
                     </p>
                   </div>
                 </div>
@@ -116,9 +106,9 @@ About page
                 <div class="media-content">
                   <div class="content">
                     <p>
-                      <strong>Node.js:</strong>
+                      <strong>Django:</strong>
                       <br>
-                      <progress class="progress is-primary" value="75" max="100"></progress>
+                      <progress class="progress is-primary" value="35" max="100"></progress>
                     </p>
                   </div>
                 </div>
@@ -128,9 +118,9 @@ About page
                 <div class="media-content">
                   <div class="content">
                     <p>
-                      <strong>HTML5/CSS3</strong>
+                      <strong>Flask:</strong>
                       <br>
-                      <progress class="progress is-primary" value="95" max="100"></progress>
+                      <progress class="progress is-primary" value="25" max="100"></progress>
                     </p>
                   </div>
                 </div>
@@ -140,9 +130,9 @@ About page
                 <div class="media-content">
                   <div class="content">
                     <p>
-                      <strong>Databases</strong>
+                      <strong>SQL:</strong>
                       <br>
-                      <progress class="progress is-primary" value="66" max="100"></progress>
+                      <progress class="progress is-primary" value="36" max="100"></progress>
                     </p>
                   </div>
                 </div>
@@ -632,26 +622,24 @@ About page
   <!-- Contact -->
   <section class="section" id="contact">
     <div class="container">
-      <div class="section-heading">
-        <h3 class="title is-2">Contact</h3>
-        <h4 class="subtitle is-5">Get in touch</h4>
+      <div class="section-heading section-feedback">
+        <h3 class="title is-2">Форма обратной связи</h3>
       </div>
       <br>
-
       <div class="columns">
         <div class="column is-6 is-offset-3">
           <div class="box">
             <div class="field">
-              <label class="label">Name</label>
+              <label class="label">Имя</label>
               <div class="control">
-                <input class="input" type="text" placeholder="Text input">
+                <input class="input" type="text" placeholder="Введите свое имя">
               </div>
             </div>
 
             <div class="field">
               <label class="label">Email</label>
               <div class="control has-icons-left">
-                <input class="input" type="email" placeholder="Email input" value="">
+                <input class="input" type="email" placeholder="Введиет свой Email" value="">
                 <span class="icon is-small is-left">
                   <i class="fas fa-envelope"></i>
                 </span>
@@ -659,9 +647,9 @@ About page
             </div>
 
             <div class="field">
-              <label class="label">Message</label>
+              <label class="label">Сообщение</label>
               <div class="control">
-                <textarea class="textarea" placeholder="Textarea"></textarea>
+                <textarea class="textarea" placeholder="Введите сообщение"></textarea>
               </div>
             </div>
 
@@ -670,7 +658,7 @@ About page
                 <button class="button is-link is-large"><span class="icon">
                     <i class="fas fa-envelope"></i>
                   </span>
-                  <span>Submit</span></button>
+                  <span>Отправить</span></button>
               </div>
             </div>
           </div>
